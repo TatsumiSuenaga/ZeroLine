@@ -3,23 +3,15 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
+
+    <!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>-->
     <Button
-        android:id="@+id/restaurants"
-        android:text="Restaurants"
+        android:id="@+id/temp1"
+        android:text="Chipotle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/bars"
-        android:text="Bars"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/stores"
-        android:text="Stores"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
 
 </LinearLayout>
