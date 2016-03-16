@@ -53,7 +53,7 @@ public class MyListFragment extends Fragment {
         mButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent i = new Intent(getActivity(), RestaurantActivity.class);
+                Intent i = new Intent(getActivity(), PostActivity.class);
                 startActivity(i);
             }
         });
