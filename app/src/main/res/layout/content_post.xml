@@ -28,6 +28,30 @@
         android:text="Jimmy: 1,000 people in line, it's crowded"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/lineStatus2"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/lineStatus3"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/lineStatus4"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/lineStatus5"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <EditText
         android:id="@+id/lineUpdate"

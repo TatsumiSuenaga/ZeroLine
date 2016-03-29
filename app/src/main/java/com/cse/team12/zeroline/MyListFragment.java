@@ -20,8 +20,10 @@ import android.widget.ListView;
 public class MyListFragment extends Fragment {
 
     private RecyclerView mList;
-    private Button mButton;
-
+    private Button mButton1;
+    private Button mButton2;
+    private Button mButton3;
+    private Button mButton4;
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -49,15 +51,38 @@ public class MyListFragment extends Fragment {
 
             });**/
 
-        mButton = (Button) v.findViewById(R.id.temp1);
-        mButton.setOnClickListener(new View.OnClickListener(){
+        mButton1 = (Button) v.findViewById(R.id.temp1);
+        mButton1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent i = new Intent(getActivity(), PostActivity.class);
                 startActivity(i);
             }
         });
-
+        mButton2 = (Button) v.findViewById(R.id.temp2);
+        mButton2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(getActivity(), PostActivity.class);
+                startActivity(i);
+            }
+        });
+        mButton3 = (Button) v.findViewById(R.id.temp3);
+        mButton3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(getActivity(), PostActivity.class);
+                startActivity(i);
+            }
+        });
+        mButton4 = (Button) v.findViewById(R.id.temp4);
+        mButton4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(getActivity(), PostActivity.class);
+                startActivity(i);
+            }
+        });
         return  v;
     }
 }

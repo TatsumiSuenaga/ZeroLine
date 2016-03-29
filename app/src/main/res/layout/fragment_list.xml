@@ -10,8 +10,32 @@
         android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>-->
     <Button
         android:id="@+id/temp1"
-        android:text="Chipotle"
+        android:text="Chipotle
+        1726 N High St
+        (614) 291-0274"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/temp2"
+        android:text="Blaze Pizza
+        1708 N. High St.
+        (614) 745-2167"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/temp3"
+        android:text="Bibibop
+        1778 N High St
+        (614) 623-8792"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/temp4"
+        android:text="Diaspora
+        2118 N High St, Columbus, OH 43201
+        (614) 458-1141"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
