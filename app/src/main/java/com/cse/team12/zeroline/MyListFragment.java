@@ -33,23 +33,6 @@ public class MyListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_list, container, false);
-        /**mList = (RecyclerView) v.findViewById(R.id.list);
-        mList.setLayoutManager(new LinearLayoutManager(getActivity()));
-        String[] temp = new String[] {"Chipotle", "Raising Canes", "Diaspora",
-                "McDonald's", "Noodles & Company", "Moe's", "Qdoba", "Jimmy Kang's Dreams of Sushi"};
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, android.R.id.text1, temp );
-
-        //Temporary adapter just for UI, this will be later made into different fragment probably
-        mList.setAdapter(adapter);
-        mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String ch = (String) mList.getItemAtPosition(position);
-                Intent i = new Intent();
-
-            });**/
 
         mButton1 = (Button) v.findViewById(R.id.temp1);
         mButton1.setOnClickListener(new View.OnClickListener(){
@@ -65,7 +48,7 @@ public class MyListFragment extends Fragment {
         mButton2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String rName = "Blaze Pizza";
+                String rName = "BlazePizza";
                 Intent i = new Intent(getActivity(), PostActivity.class);
                 i.putExtra("name",rName );
                 startActivity(i);

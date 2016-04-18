@@ -32,7 +32,7 @@ public class PostActivity extends AppCompatActivity {
     int textViewCount = 5;
     int counter = 0;
     TextView[] TextViewArray = new TextView[textViewCount];
-
+    String tName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,13 +52,14 @@ public class PostActivity extends AppCompatActivity {
 
         String rName = intent.getExtras().getString("name");
         mRest.setText(rName);
+        tName = rName; //setting global string to db table name for onclicklistener
 
         TextViewArray[0] = mView;
         TextViewArray[1] = mView1;
         TextViewArray[2] = mView2;
         TextViewArray[3] = mView3;
         TextViewArray[4] = mView4;
-        String [] data = getPosts();
+        String [] data = getPosts(rName);
         if (data.length > 0) {
             for (int i = 0; i < data.length-1 && i < 5; i++)
             {
@@ -77,7 +78,7 @@ public class PostActivity extends AppCompatActivity {
 
 
                 if (v == mUpdate) {
-                    insertIntoDB();
+                    insertIntoDB(tName);
                 }
 
                 if (mEdit.getText().toString() != "") {
@@ -99,11 +100,18 @@ public class PostActivity extends AppCompatActivity {
     protected void createDB() {
 
         db = openOrCreateDatabase("PostsDB", Context.MODE_PRIVATE, null);
-        db.execSQL("CREATE TABLE IF NOT EXISTS posts(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
+        db.execSQL("CREATE TABLE IF NOT EXISTS Chipotle(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
                 "post VARCHAR);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS BlazePizza(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
+                "post VARCHAR);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Diaspora(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
+                "post VARCHAR);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Bibipop(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
+                "post VARCHAR);");
+
     }
 
-    protected void insertIntoDB() {
+    protected void insertIntoDB(String name) {
         String post = mEdit.getText().toString().trim();
         if (post.equals("")) {
             Toast.makeText(getApplicationContext(), "Please fill all fields",
@@ -111,16 +119,16 @@ public class PostActivity extends AppCompatActivity {
             return;
         }
 
-        String query = "INSERT INTO posts (post) VALUES('" + post + "');";
+        String query = "INSERT INTO '" + name + "'(post) VALUES('" + post + "');";
         db.execSQL(query);
         Toast.makeText(getApplicationContext(), "Post Saved!", Toast.LENGTH_LONG).show();
 
     }
 
-    protected String[] getPosts() {
+    protected String[] getPosts(String tableName) {
 
-        final String TableName = "posts";
-        String selectQuery = "Select post FROM " + TableName;
+        //final String TableName = "posts";
+        String selectQuery = "Select post FROM " + tableName;
         Cursor cursor = db.rawQuery(selectQuery, null);
         String[] data = new String[100];
 
