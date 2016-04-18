@@ -55,7 +55,9 @@ public class MyListFragment extends Fragment {
         mButton1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                String rName = "Chipotle";
                 Intent i = new Intent(getActivity(), PostActivity.class);
+                i.putExtra("name",rName );
                 startActivity(i);
             }
         });
@@ -63,7 +65,9 @@ public class MyListFragment extends Fragment {
         mButton2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                String rName = "Blaze Pizza";
                 Intent i = new Intent(getActivity(), PostActivity.class);
+                i.putExtra("name",rName );
                 startActivity(i);
             }
         });
@@ -71,7 +75,9 @@ public class MyListFragment extends Fragment {
         mButton3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                String rName = "Bibipop";
                 Intent i = new Intent(getActivity(), PostActivity.class);
+                i.putExtra("name",rName );
                 startActivity(i);
             }
         });
@@ -79,7 +85,9 @@ public class MyListFragment extends Fragment {
         mButton4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                String rName = "Diaspora";
                 Intent i = new Intent(getActivity(), PostActivity.class);
+                i.putExtra("name",rName );
                 startActivity(i);
             }
         });
