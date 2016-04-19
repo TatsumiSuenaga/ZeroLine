@@ -17,6 +17,7 @@ public class MenuFragment extends Fragment {
     private Button mRest;
     private Button mBar;
     private Button mStore;
+    private Button mMap;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -54,6 +55,15 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View v){
                 Intent i = new Intent(getActivity(), RestaurantActivity.class);
+                startActivity(i);
+            }
+        });
+
+        mMap = (Button) v.findViewById(R.id.maps);
+        mMap.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(getActivity(), MapsActivity.class);
                 startActivity(i);
             }
         });
