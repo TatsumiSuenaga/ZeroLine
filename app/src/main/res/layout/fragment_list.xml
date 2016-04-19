@@ -18,7 +18,9 @@
     <Button
         android:id="@+id/temp2"
         android:text="Blaze Pizza
+
         1708 N. High St.
+
         (614) 745-2167"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

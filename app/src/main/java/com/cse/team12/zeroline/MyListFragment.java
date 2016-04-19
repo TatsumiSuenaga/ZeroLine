@@ -48,7 +48,7 @@ public class MyListFragment extends Fragment {
         mButton2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                String rName = "Blaze Pizza";
+                String rName = "BlazePizza";
                 Intent i = new Intent(getActivity(), PostActivity.class);
                 i.putExtra("name",rName );
                 startActivity(i);
